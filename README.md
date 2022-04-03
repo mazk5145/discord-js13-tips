@@ -141,7 +141,7 @@ interaction.reply({
 </details>
 
 <details>
-<summary><h4>Discord.js V13 Bot - Embeds</h4></summary>
+<summary><h4>Discord.js V13 Bot - Web Server</h4></summary>
 
 **Simple Web Server index.js**
 ```js
