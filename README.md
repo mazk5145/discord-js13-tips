@@ -1,6 +1,8 @@
 # discord-js13-tips
 i will add sum discord.js v13 scripts / tips here
 
+--------------------------------------------------
+
 <details>
 <summary><h4>Base for Discord.js V13 Bot</h4></summary>
   
@@ -16,6 +18,8 @@ client.login('token');
 ```
   
 </details>
+
+--------------------------------------------------
 
 <details>
 <summary><h4>Discord V13 Bot - Intents</h4></summary>
@@ -43,6 +47,8 @@ client.login('token');
 ```
 
 </details>
+
+--------------------------------------------------
 
 <details>
 <summary><h4>Discord V13 Bot - Handlers</h4></summary>
@@ -101,6 +107,8 @@ for (const file of eventFiles) {
 
 </details>
 
+--------------------------------------------------
+
 <details>
 <summary><h4>Discord.js V13 Bot - Messages</h4></summary>
 
@@ -139,6 +147,8 @@ interaction.reply({
 ```
 
 </details>
+
+--------------------------------------------------
 
 <details>
 <summary><h4>Discord.js V13 Bot - Web Server</h4></summary>
@@ -214,6 +224,8 @@ https://discordjs.guide/popular-topics/embeds.html
 ```
 
 </details>
+
+--------------------------------------------------
 
 <details>
 <summary><h4>Template for later use</h4></summary>
@@ -315,7 +327,7 @@ https://discordjs.guide/popular-topics/embeds.html
 
 </details>
 
-
+--------------------------------------------------
 
 
 ## Usefull Sites
