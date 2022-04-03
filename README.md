@@ -170,7 +170,17 @@ module.exports = (client) => {
 ```
 --------------------------------------------------
 <details>
-<summary><h5>test</h5></summary>
+<summary><h5>Addon [uptimerobot.com] Status Page</h5></summary>
+
+```md
+1: Register or Login.
+2: Create new Monitor
+3: Name it like "Discord Bot"
+4: Set Monitor type as "HTTP(s)"
+5: Set URL (or IP) as "http://publicip:port/" like ["128.218.12.34:6969/"]
+6: Save Changes
+```
+
 
 </details>
 
