@@ -101,9 +101,47 @@ for (const file of eventFiles) {
 
 </details>
 
+<details>
+<summary><h4>Discord.js V13 Bot - Messages</h4></summary>
+
+**Normal Messages**
+```js
+
+const embedi = new Discord.MessageEmbed()
+.setAuthor({ name: "test embedi" });
+
+message.channel.send({
+  content: "hello", // Content = message
+  embeds: [embedi] // message Embeds
+});
+
+message.reply({
+  content: "hello", // Content = message
+  embeds: [embedi] // message Embeds
+});
+```
+
+**Interaction Messages**
+```js
+const embedi = new Discord.MessageEmbed()
+.setAuthor({ name: "test embedi" });
+
+interaction.channel.send({
+  content: "hello", // Content = message
+  embeds: [embedi], // message Embeds
+})
+
+interaction.reply({
+  content: "hello", // Content = message
+  embeds: [embedi], // message Embeds
+  ephemeral: true or false // True = private msg | false = public
+})
+```
+
+</details>
 
 <details>
-<summary><h4>Discord.js V13 Embeds</h4></summary>
+<summary><h4>Discord.js V13 Bot - Embeds</h4></summary>
 
 ```js
 const { MessageEmbed } = require('discord.js');
