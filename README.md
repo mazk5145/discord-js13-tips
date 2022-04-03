@@ -4,7 +4,7 @@ i will add sum discord.js v13 scripts / tips here
 
 <details OPEN>
 <summary><h4>Discord V13 Bot - Intents</h4></summary>
-soon
+soond
 </details>
 
 <details OPEN>
