@@ -169,6 +169,11 @@ module.exports = (client) => {
 };
 ```
 
+<details>
+<summary><h4>Discord.js V13 Bot - Web Server</h4></summary>
+
+</details>
+
 </details>
 
 
