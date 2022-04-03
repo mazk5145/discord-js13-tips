@@ -199,6 +199,100 @@ module.exports = (client) => {
 --------------------------------------------------
 
 <details>
+<summary><h4>Discord V13 Bot - Events</h4></summary>
+	
+**Sum Events**
+```js
+
+// Channels
+client.on("channelCreate", function(channel){
+    console.log(`Channel Created: ${channel}`);
+});
+
+client.on("channelDelete", function(channel){
+    console.log(`Channel Got Deleted: ${channel}`);
+});
+
+// Bans
+client.on("guildBanAdd", function(guild, user){
+    console.log(`Member: ${user} got banned :D`);
+});
+
+client.on("guildBanRemove", function(guild, user){
+    console.log(`Member: ${user} bans got removed :thinkin:`);
+});
+
+// Guilds
+client.on("guildCreate", function(guild){
+    console.log(`I Joined on: ${guild}`);
+});
+
+client.on("guildDelete", function(guild){
+    console.log(`I Lefted from server: ${guild}`);
+});
+
+client.on("guildMemberAdd", function(member){
+    console.log(`Hello my friend: ${member.tag}`);
+});
+
+client.on("guildMemberRemove", function(member){
+    console.log(`Member Leaved / Kicked: ${member.tag}`);
+});
+
+client.on("guildUnavailable", function(guild){
+    console.error(`Uhm... Server down?: ${guild}`);
+});
+
+// Messages
+client.on("messageReactionAdd", function(messageReaction, user){
+    console.log(`sum message got reaction, from ${user.tag}`);
+});
+
+client.on("messageReactionRemove", function(messageReaction, user){
+    console.log(`Member: ${user.tag} removed his reaction`);
+});
+
+client.on("messageUpdate", function(oldMessage, newMessage){
+    console.log(`Message: ${oldMessage} got updated with ${newMessage}`);
+});
+
+// Create Invites
+client.generateInvite(['SEND_MESSAGES', 'MANAGE_GUILD', 'MENTION_EVERYONE']).then(link => {
+	console.log(`I Generated invite link: ${link}`);
+});
+
+//Errors
+client.on("error", function(error){
+    console.error(`Error: ${error}`);
+});
+
+client.on("reconnecting", function(){
+    console.log(`Reconnecting to Discord API`);
+});
+
+client.on("warn", function(info){
+    console.log(`Warning: ${info}`);
+});
+
+// Roles
+client.on("roleCreate", function(role){
+    console.error(`Role is created ${role}`);
+});
+
+client.on("roleDelete", function(role){
+    console.error(`Role just got deleted ${role}`);
+});
+
+client.once('ready', async() => {
+  console.log("Bot online!");
+})
+```
+
+</details>
+
+--------------------------------------------------
+
+<details>
 <summary><h4>Discord.js V13 Bot - Embeds</h4></summary>
 
 ```js
