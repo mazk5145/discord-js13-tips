@@ -2,7 +2,7 @@
 i will add sum discord.js v13 scripts / tips here
 
 
-<details OPEN>
+<details>
 <summary><h4>Discord V13 Bot - Intents</h4></summary>
 
 **Basic Intents**
@@ -29,7 +29,7 @@ i will add sum discord.js v13 scripts / tips here
 
 </details>
 
-<details OPEN>
+<details>
 <summary><h4>Base for Discord.js V13 Bot</h4></summary>
   
 ```js
@@ -45,7 +45,7 @@ client.login('token');
   
 </details>
 
-<details OPEN>
+<details>
 <summary><h4>Discord.js V13 Embeds</h4></summary>
 
 ```js
