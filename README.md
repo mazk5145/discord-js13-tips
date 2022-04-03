@@ -2,8 +2,14 @@
 i will add sum discord.js v13 scripts / tips here
 
 
+<details OPEN>
+<summary><h4>Discord V13 Bot - Intents</h4></summary>
+soon
+</details>
 
-### Base Bot
+<details OPEN>
+<summary><h4>Base for Discord.js V13 Bot</h4></summary>
+  
 ```js
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -14,6 +20,8 @@ client.on('ready', () => {
 
 client.login('token');
 ```
+  
+</details>
 
 ### (TEMPLATE DON'T DELETE)
 ```js
