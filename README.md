@@ -71,10 +71,8 @@ https://discordjs.guide/popular-topics/embeds.html
 
 </details>
 
-### (TEMPLATE DON'T DELETE)
-```js
-
-```
+<details>
+<summary><h4>Template for later use</h4></summary>
 
 ### (TEMPLATE DON'T DELETE)
 ```js
@@ -165,6 +163,16 @@ https://discordjs.guide/popular-topics/embeds.html
 ```js
 
 ```
+
+### (TEMPLATE DON'T DELETE)
+```js
+
+```
+
+</details>
+
+
+
 
 ## Usefull Sites
 ```
