@@ -178,7 +178,7 @@ module.exports = (client) => {
     });
 };
 ```
---------------------------------------------------
+
 <details>
 <summary><h5>Addon [uptimerobot.com] Status Page</h5></summary>
 
@@ -194,10 +194,9 @@ module.exports = (client) => {
 
 </details>
 
---------------------------------------------------
-
 </details>
 
+--------------------------------------------------
 
 <details>
 <summary><h4>Discord.js V13 Bot - Embeds</h4></summary>
