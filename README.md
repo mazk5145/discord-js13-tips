@@ -143,6 +143,38 @@ interaction.reply({
 <details>
 <summary><h4>Discord.js V13 Bot - Embeds</h4></summary>
 
+**Simple Web Server index.js**
+```js
+const fs = require("fs");
+
+fs.readdirSync("handlers/").forEach(dirs => require("./handlers/" + dirs)(client));
+```
+
+**Simple Web Server handlers/monitor.js**
+```js
+const express = require("express"); // Import Express module
+const app = express(); // INIT Express as app
+const port = 6969; // Web Listener Port
+
+module.exports = (client) => {
+    // App will give response if url = localhost:6969 not localhost:6969/lolxd
+    app.get("/", async (req, res) => { 
+        res.send("Copyright (c) 2022 mazk All rights reserved.")
+    });
+    
+    // Listen localhost:6969 or public:6969 if firewall allow
+    app.listen(port, async () => {
+        console.log("Started Hosting on: http://localhost:" + port);
+    });
+};
+```
+
+</details>
+
+
+<details>
+<summary><h4>Discord.js V13 Bot - Embeds</h4></summary>
+
 ```js
 const { MessageEmbed } = require('discord.js');
 
