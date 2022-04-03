@@ -1,6 +1,21 @@
 # discord-js13-tips
 i will add sum discord.js v13 scripts / tips here
 
+<details>
+<summary><h4>Base for Discord.js V13 Bot</h4></summary>
+  
+```js
+const { Client, Intents } = require('discord.js');
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+
+client.on('ready', () => {
+  console.log(`Bot Have been Successfully started: ${client.user.tag}`);
+});
+
+client.login('token');
+```
+  
+</details>
 
 <details>
 <summary><h4>Discord V13 Bot - Intents</h4></summary>
@@ -30,20 +45,60 @@ i will add sum discord.js v13 scripts / tips here
 </details>
 
 <details>
-<summary><h4>Base for Discord.js V13 Bot</h4></summary>
-  
+<summary><h4>Discord V13 Bot - Handlers</h4></summary>
+
+**Example Command ["SLASH"]**
 ```js
-const { Client, Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const { SlashCommandBuilder } = require("@discordjs/builders");
 
-client.on('ready', () => {
-  console.log(`Bot Have been Successfully started: ${client.user.tag}`);
-});
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName("sayhello")
+        .setDescription("Command Desc"),
 
-client.login('token');
+    async execute(interaction) {
+
+        interaction.reply({
+            content: "Hello!", // Content "message"
+            //Embeds: [], // Embeds
+            ephemeral: true, // Will reply as interaction creator sees only
+        });
+    },
+};
 ```
-  
+
+**Command Handler from** `commands` **folder**
+```js
+
+const fs = require("fs");
+
+const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"))
+const commands = [];
+
+client.commands = new Collection();
+
+for (const file of commandFiles) {
+    const command = require(`./commands/${file}`);
+    commands.push(command.data.toJSON());
+    client.commands.set(command.data.name, command)
+}
+```
+
+**Event Handler from** `events` **folder**
+```js
+const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
+for (const file of eventFiles) {
+	const event = require(`./events/${file}`);
+	if (event.once) {
+		client.once(event.name, (...args) => event.execute(...args));
+	} else {
+		client.on(event.name, (...args) => event.execute(...args));
+	}
+}
+```
+
 </details>
+
 
 <details>
 <summary><h4>Discord.js V13 Embeds</h4></summary>
