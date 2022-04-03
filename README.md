@@ -3,73 +3,80 @@ i will add sum discord.js v13 scripts / tips here
 
 
 
-### (TEMPLATE DON'T DELETE)
-```
+### Base Bot
+```js
+const { Client, Intents } = require('discord.js');
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
-```
+client.on('ready', () => {
+  console.log(`Bot Have been Successfully started: ${client.user.tag}`);
+});
 
-### (TEMPLATE DON'T DELETE)
-```
-
-```
-
-### (TEMPLATE DON'T DELETE)
-```
-
+client.login('token');
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
-```
+```js
 
 ```
 
 ### (TEMPLATE DON'T DELETE)
+```js
+
 ```
+
+### (TEMPLATE DON'T DELETE)
+```js
+
+```
+
+### (TEMPLATE DON'T DELETE)
+```js
 
 ```
 
