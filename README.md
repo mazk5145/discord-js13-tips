@@ -129,13 +129,13 @@ const embedi = new Discord.MessageEmbed()
 interaction.channel.send({
   content: "hello", // Content = message
   embeds: [embedi], // message Embeds
-})
+});
 
 interaction.reply({
   content: "hello", // Content = message
   embeds: [embedi], // message Embeds
   ephemeral: true or false // True = private msg | false = public
-})
+});
 ```
 
 </details>
