@@ -200,11 +200,9 @@ module.exports = (client) => {
 
 <details>
 <summary><h4>Discord V13 Bot - Events</h4></summary>
-	
-**Sum Events**
-```js
 
-// Channels
+**Channels**
+```js
 client.on("channelCreate", function(channel){
     console.log(`Channel Created: ${channel}`);
 });
@@ -212,8 +210,10 @@ client.on("channelCreate", function(channel){
 client.on("channelDelete", function(channel){
     console.log(`Channel Got Deleted: ${channel}`);
 });
+```
 
-// Bans
+**Bans**
+```js
 client.on("guildBanAdd", function(guild, user){
     console.log(`Member: ${user} got banned :D`);
 });
@@ -221,8 +221,10 @@ client.on("guildBanAdd", function(guild, user){
 client.on("guildBanRemove", function(guild, user){
     console.log(`Member: ${user} bans got removed :thinkin:`);
 });
+```
 
-// Guilds
+**Guilds**
+```js
 client.on("guildCreate", function(guild){
     console.log(`I Joined on: ${guild}`);
 });
@@ -242,8 +244,10 @@ client.on("guildMemberRemove", function(member){
 client.on("guildUnavailable", function(guild){
     console.error(`Uhm... Server down?: ${guild}`);
 });
+```
 
-// Messages
+**Messages**
+```js
 client.on("messageReactionAdd", function(messageReaction, user){
     console.log(`sum message got reaction, from ${user.tag}`);
 });
@@ -255,13 +259,17 @@ client.on("messageReactionRemove", function(messageReaction, user){
 client.on("messageUpdate", function(oldMessage, newMessage){
     console.log(`Message: ${oldMessage} got updated with ${newMessage}`);
 });
+```
 
-// Create Invites
+**Create Invite Link**
+```js
 client.generateInvite(['SEND_MESSAGES', 'MANAGE_GUILD', 'MENTION_EVERYONE']).then(link => {
 	console.log(`I Generated invite link: ${link}`);
 });
+```
 
-//Errors
+**Errors**
+```js
 client.on("error", function(error){
     console.error(`Error: ${error}`);
 });
@@ -273,8 +281,10 @@ client.on("reconnecting", function(){
 client.on("warn", function(info){
     console.log(`Warning: ${info}`);
 });
+```
 
-// Roles
+**Roles**
+```js
 client.on("roleCreate", function(role){
     console.error(`Role is created ${role}`);
 });
@@ -282,7 +292,10 @@ client.on("roleCreate", function(role){
 client.on("roleDelete", function(role){
     console.error(`Role just got deleted ${role}`);
 });
+```
 
+**Bot Ready**
+```js
 client.once('ready', async() => {
   console.log("Bot online!");
 })
